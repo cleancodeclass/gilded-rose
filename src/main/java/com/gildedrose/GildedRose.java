@@ -1,7 +1,8 @@
 package com.gildedrose;
 
 class GildedRose {
-    Item[] items;
+    private static final int MAX_QUALITY = 50;
+	Item[] items;
 
     public GildedRose(Item[] items) {
         this.items = items;
@@ -17,18 +18,18 @@ class GildedRose {
                     }
                 }
             } else {
-                if (items[i].quality < 50) {
+                if (items[i].quality < MAX_QUALITY) {
                     items[i].quality = items[i].quality + 1;
 
                     if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                         if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
+                            if (items[i].quality < MAX_QUALITY) {
                                 items[i].quality = items[i].quality + 1;
                             }
                         }
 
                         if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
+                            if (items[i].quality < MAX_QUALITY) {
                                 items[i].quality = items[i].quality + 1;
                             }
                         }
@@ -52,7 +53,7 @@ class GildedRose {
                         items[i].quality = items[i].quality - items[i].quality;
                     }
                 } else {
-                    if (items[i].quality < 50) {
+                    if (items[i].quality < MAX_QUALITY) {
                         items[i].quality = items[i].quality + 1;
                     }
                 }
