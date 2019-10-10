@@ -11,7 +11,7 @@ public class SulfurasItem {
 	}
 
 
-	protected void updateQualityForSulfuras() {
+	protected void updateQuality() {
 		if (item.quality > 0) {
 		}
 		if (item.sellIn < 0) {

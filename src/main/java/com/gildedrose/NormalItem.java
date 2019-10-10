@@ -9,7 +9,7 @@ public class NormalItem {
 		this.item = item;
 	}
 
-	protected void updateQualityForNormalItem() {
+	protected void updateQuality() {
 		if (item.quality > 0) {
 			item.quality = item.quality - 1;
 		}

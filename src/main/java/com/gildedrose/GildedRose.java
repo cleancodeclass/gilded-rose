@@ -17,16 +17,16 @@ class GildedRose {
 			Item item = items[i];
 			if (item.name.equals(AGED_BRIE)) {
 				AgedBrieItem agedBrieItem = new AgedBrieItem(item);
-				agedBrieItem.updateQualityForAgedBrie();
+				agedBrieItem.updateQuality();
 			} else if (item.name.equals(BACKSTAGE_PASSES)) {
 				BackstagePassItem backstagePassItem = new BackstagePassItem(item);
-				backstagePassItem.updateQualityForBackstagePass();
+				backstagePassItem.updateQuality();
 			} else if (item.name.equals(SULFURAS)) {
 				SulfurasItem sulfurasItem = new SulfurasItem(item);
-				sulfurasItem.updateQualityForSulfuras();
+				sulfurasItem.updateQuality();
 			} else {
 				NormalItem normalItem = new NormalItem(item);
-				normalItem.updateQualityForNormalItem();
+				normalItem.updateQuality();
 			}
 
 			if (item.name.equals(SULFURAS)) {

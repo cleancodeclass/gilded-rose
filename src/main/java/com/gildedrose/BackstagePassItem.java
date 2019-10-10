@@ -9,7 +9,7 @@ public class BackstagePassItem {
 		this.item = item;
 	}
 
-	protected void updateQualityForBackstagePass() {
+	protected void updateQuality() {
 		if (item.quality < GildedRose.MAX_QUALITY) {
 			item.quality = item.quality + 1;
 	

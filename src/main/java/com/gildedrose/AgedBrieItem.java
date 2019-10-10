@@ -9,7 +9,7 @@ public class AgedBrieItem {
 		this.item = item;
 	}
 
-	protected void updateQualityForAgedBrie() {
+	protected void updateQuality() {
 		if (item.quality < GildedRose.MAX_QUALITY) {
 			item.quality = item.quality + 1;
 		}
