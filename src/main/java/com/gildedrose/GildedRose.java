@@ -17,14 +17,24 @@ class GildedRose {
 			Item item = items[i];
 			updateQuality(item);
 
-			if (item.name.equals(SULFURAS)) {
-			} else {
-				item.sellIn = item.sellIn - 1;
-			}
+			updateSellIn(item);
+		}
+	}
+
+	protected void updateSellIn(Item item) {
+		if (item.name.equals(SULFURAS)) {
+		} else {
+			item.sellIn = item.sellIn - 1;
 		}
 	}
 
 	protected void updateQuality(Item item) {
+		GildedRoseItem gildedRoseItem;
+		gildedRoseItem = createGildedRoseItem(item);
+		gildedRoseItem.updateQuality();
+	}
+
+	protected GildedRoseItem createGildedRoseItem(Item item) {
 		GildedRoseItem gildedRoseItem;
 		if (item.name.equals(AGED_BRIE)) {
 			gildedRoseItem = new AgedBrieItem(item);
@@ -35,6 +45,6 @@ class GildedRose {
 		} else {
 			gildedRoseItem = new NormalItem(item);
 		}
-		gildedRoseItem.updateQuality();
+		return gildedRoseItem;
 	}
 }
