@@ -1,15 +1,15 @@
 package com.gildedrose;
 
 
-public class BackstagePassItem {
+public class BackstagePassItem extends GildedRoseItem {
 
-	private Item item;
 
 	public BackstagePassItem(Item item) {
-		this.item = item;
+		super(item);
 	}
 
-	protected void updateQuality() {
+	@Override
+	public void updateQuality() {
 		if (item.quality < GildedRose.MAX_QUALITY) {
 			item.quality = item.quality + 1;
 	

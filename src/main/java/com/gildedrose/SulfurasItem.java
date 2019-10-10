@@ -1,17 +1,16 @@
 package com.gildedrose;
 
 
-public class SulfurasItem {
+public class SulfurasItem  extends GildedRoseItem{
 
-	private Item item;
 
 	public SulfurasItem(Item item) {
-		this.item = item;
-		// TODO Auto-generated constructor stub
+		super(item);
 	}
 
 
-	protected void updateQuality() {
+	@Override
+	public void updateQuality() {
 		if (item.quality > 0) {
 		}
 		if (item.sellIn < 0) {
