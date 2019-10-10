@@ -25,23 +25,13 @@ class GildedRose {
 				SulfurasItem sulfurasItem = new SulfurasItem(item);
 				sulfurasItem.updateQualityForSulfuras();
 			} else {
-				updateQualityForNormalItem(item);
+				NormalItem normalItem = new NormalItem(item);
+				normalItem.updateQualityForNormalItem();
 			}
 
 			if (item.name.equals(SULFURAS)) {
 			} else {
 				item.sellIn = item.sellIn - 1;
-			}
-		}
-	}
-
-	protected void updateQualityForNormalItem(Item item) {
-		if (item.quality > 0) {
-			item.quality = item.quality - 1;
-		}
-		if (item.sellIn < 1) {
-			if (item.quality > 0) {
-				item.quality = item.quality - 1;
 			}
 		}
 	}
