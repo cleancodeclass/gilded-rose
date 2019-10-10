@@ -11,22 +11,23 @@ class GildedRose {
 	public GildedRose(Item[] items) {
 		this.items = items;
 	}
-
+	
 	public void updateQuality() {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
+			GildedRoseItem gildedRoseItem;
 			if (item.name.equals(AGED_BRIE)) {
-				AgedBrieItem agedBrieItem = new AgedBrieItem(item);
-				agedBrieItem.updateQuality();
+				gildedRoseItem = new AgedBrieItem(item);
+				gildedRoseItem.updateQuality();
 			} else if (item.name.equals(BACKSTAGE_PASSES)) {
-				BackstagePassItem backstagePassItem = new BackstagePassItem(item);
-				backstagePassItem.updateQuality();
+				gildedRoseItem = new BackstagePassItem(item);
+				gildedRoseItem.updateQuality();
 			} else if (item.name.equals(SULFURAS)) {
-				SulfurasItem sulfurasItem = new SulfurasItem(item);
-				sulfurasItem.updateQuality();
+				gildedRoseItem = new SulfurasItem(item);
+				gildedRoseItem.updateQuality();
 			} else {
-				NormalItem normalItem = new NormalItem(item);
-				normalItem.updateQuality();
+				gildedRoseItem = new NormalItem(item);
+				gildedRoseItem.updateQuality();
 			}
 
 			if (item.name.equals(SULFURAS)) {
