@@ -1,14 +1,13 @@
 package com.gildedrose;
 
-public class SulfurasItem {
-
-	private Item item;
+public class SulfurasItem  extends GildedRoseItem{
 
 	public SulfurasItem(Item item) {
-		this.item = item;
+		super(item);
 	}
 
-	void updateQualitySulfuras() {
+	@Override
+	public void updateQuality() {
 		if (item.quality > 0) {
 		}
 		if (item.sellIn < 0) {
